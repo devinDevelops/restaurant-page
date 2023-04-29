@@ -4,16 +4,16 @@ header {
   height: 125px;
   align-items: center;
   gap: 30px;
+  margin: auto 65px;
 }
 
 .h1-cont {
   display: flex;
-  justify-content: center;
+  justify-content: start;
 }
 
-h1 {
+.h1-cont h1 {
   font-size: 1.65rem;
-  padding-left: 45px;
   font-family: 'Romelio Sans', sans-serif;
   margin-top: 6px;
 }
@@ -33,28 +33,71 @@ li {
 
 .btn-cont {
   display: flex;
-  justify-content: center;
-  padding-right: 45px;
+  justify-content: end;
 }
 
-.btn-cont button {
+header .btn-cont .btn {
   border: 2px solid var(--rich-brown);
+  color: var(--rich-brown);
   background-color: #fff;
-  border-radius: 25px;
-  padding: 14px 18px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.15s;
 }
 
-.btn-cont button:hover {
+header .btn-cont .btn:hover {
   background-color: var(--rich-brown);
   color: #fff;
 }
 
-h1,
-.btn-cont button,
+.h1-cont h1,
+header .btn-cont .btn,
 li {
   white-space: nowrap;
   color: var(--rich-brown);
+}
+
+main {
+  margin-left: 65px;
+  display: grid;
+  grid-template-columns: 540px auto;
+  align-items: center;
+}
+
+.text-cont h1 {
+  font-size: 3.75rem;
+  color: var(--rich-brown);
+  line-height: 5rem;
+}
+
+.text-cont h1 > span {
+  color: var(--persian-red);
+}
+
+.text-cont p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--rich-brown);
+}
+
+.text-cont h1,
+.text-cont h1 > span {
+  font-family: 'Romelio Sans', sans-serif;
+}
+
+.text-cont .btn {
+  border: 2px solid var(--persian-red);
+  background-color: var(--persian-red);
+  color: #fff;
+  margin-top: 15px;
+}
+
+.text-cont .btn:hover {
+  background-color: #fff;
+  color: var(--persian-red);
+}
+
+.img-cont {
+  justify-self: end;
+}
+
+.img-cont img {
+  height: 100%;
 }

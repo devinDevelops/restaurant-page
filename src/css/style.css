@@ -14,8 +14,18 @@ body {
 
 #content {
   height: 100%;
+  grid-template-rows: auto 1fr 75px;
 }
 
 :root {
   --rich-brown: #5e1f13;
+  --persian-red: #c6453e;
+}
+
+.btn {
+  border-radius: 25px;
+  padding: 14px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s;
 }
