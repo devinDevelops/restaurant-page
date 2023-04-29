@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+@import url('https://fonts.cdnfonts.com/css/romelio-sans');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#content {
+  height: 100%;
+}
+
+:root {
+  --rich-brown: #5e1f13;
+}
