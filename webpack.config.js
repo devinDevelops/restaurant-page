@@ -13,9 +13,16 @@ module.exports = {
     clean: true,
   },
   devtool: 'inline-source-map',
+  devServer: {
+    static: './dist',
+  },
+  optimization: {
+    runtimeChunk: 'single',
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Restaurant Page',
+      template: './src/index.html',
     }),
   ],
   module: {
@@ -23,6 +30,10 @@ module.exports = {
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       },
     ],
   },
