@@ -101,3 +101,23 @@ main {
 .img-cont img {
   height: 100%;
 }
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  color: var(--rich-brown);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--persian-red);
+}

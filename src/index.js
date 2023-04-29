@@ -68,5 +68,22 @@ function createMain() {
   contentDiv.appendChild(main);
 }
 
+function createFooter() {
+  const footer = createEl('footer');
+  const p = createEl('p');
+  const a = createEl('a');
+
+  p.textContent = 'Developed by ';
+  a.textContent = 'devinDevelops';
+
+  a.setAttribute('href', 'https://github.com/devinDevelops');
+  a.setAttribute('target', '_blank');
+
+  p.appendChild(a);
+  footer.appendChild(p);
+  contentDiv.appendChild(footer);
+}
+
 createHeader();
 createMain();
+createFooter();

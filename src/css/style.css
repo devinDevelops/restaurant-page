@@ -14,7 +14,8 @@ body {
 
 #content {
   height: 100%;
-  grid-template-rows: auto 1fr 75px;
+  display: grid;
+  grid-template-rows: auto 1fr 50px;
 }
 
 :root {
