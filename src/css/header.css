@@ -48,7 +48,7 @@ header .btn-cont .btn:hover {
   color: #fff;
 }
 
-.h1-cont h1,
+header .h1-cont h1,
 header .btn-cont .btn,
 li {
   white-space: nowrap;

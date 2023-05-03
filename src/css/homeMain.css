@@ -5,43 +5,43 @@ main {
   align-items: center;
 }
 
-.text-cont h1 {
+main .text-cont h1 {
   font-size: 3.75rem;
   color: var(--rich-brown);
   line-height: 5rem;
 }
 
-.text-cont h1 > span {
+main .text-cont h1 > span {
   color: var(--persian-red);
 }
 
-.text-cont p {
+main .text-cont p {
   font-size: 1.5rem;
   font-weight: 500;
   color: var(--rich-brown);
 }
 
-.text-cont h1,
-.text-cont h1 > span {
+main .text-cont h1,
+main .text-cont h1 > span {
   font-family: 'Romelio Sans', sans-serif;
 }
 
-.text-cont .btn {
+main .text-cont .btn {
   border: 2px solid var(--persian-red);
   background-color: var(--persian-red);
   color: #fff;
   margin-top: 15px;
 }
 
-.text-cont .btn:hover {
+main .text-cont .btn:hover {
   background-color: #fff;
   color: var(--persian-red);
 }
 
-.img-cont {
+main .img-cont {
   justify-self: end;
 }
 
-.img-cont img {
+main .img-cont img {
   height: 100%;
 }
