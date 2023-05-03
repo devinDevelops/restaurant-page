@@ -1,47 +1,47 @@
-main {
+.home {
   margin-left: 65px;
   display: grid;
   grid-template-columns: 540px auto;
   align-items: center;
 }
 
-main .text-cont h1 {
+.home .text-cont h1 {
   font-size: 3.75rem;
   color: var(--rich-brown);
   line-height: 5rem;
 }
 
-main .text-cont h1 > span {
+.home .text-cont h1 > span {
   color: var(--persian-red);
 }
 
-main .text-cont p {
+.home .text-cont p {
   font-size: 1.5rem;
   font-weight: 500;
   color: var(--rich-brown);
 }
 
-main .text-cont h1,
-main .text-cont h1 > span {
+.home .text-cont h1,
+.home .text-cont h1 > span {
   font-family: 'Romelio Sans', sans-serif;
 }
 
-main .text-cont .btn {
+.home .text-cont .btn {
   border: 2px solid var(--persian-red);
   background-color: var(--persian-red);
   color: #fff;
   margin-top: 15px;
 }
 
-main .text-cont .btn:hover {
+.home .text-cont .btn:hover {
   background-color: #fff;
   color: var(--persian-red);
 }
 
-main .img-cont {
+.home .img-cont {
   justify-self: end;
 }
 
-main .img-cont img {
+.home .img-cont img {
   height: 100%;
 }

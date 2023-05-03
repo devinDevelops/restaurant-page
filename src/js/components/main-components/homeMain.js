@@ -1,6 +1,7 @@
 import '../../../css/homeMain.css';
+import Hero from '../../../img/homeIMG.png';
 
-export default function createMain(createEl, contentDiv, Hero) {
+export default function createMain(createEl, contentDiv) {
   const main = createEl('main');
   const textCont = createEl('div');
   const h1 = createEl('h1');
@@ -20,6 +21,7 @@ export default function createMain(createEl, contentDiv, Hero) {
   orderBtn.classList.add('btn');
   textCont.classList.add('text-cont');
   imgCont.classList.add('img-cont');
+  main.classList.add('home');
 
   h1.appendChild(span);
   imgCont.appendChild(img);

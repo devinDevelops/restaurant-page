@@ -1,31 +1,31 @@
-main {
+.about-us {
   margin: 0 65px;
   height: 100%;
 }
 
-main .h1-cont h1 {
+.about-us .h1-cont h1 {
   font-size: 2.75rem;
   margin-bottom: 10px;
   color: var(--persian-red);
 }
 
-main .text-cont {
+.about-us .text-cont {
   width: min(870px, 100%);
 }
 
-main .text-cont p {
+.about-us .text-cont p {
   font-weight: 500;
   font-size: 1.125rem;
   margin-bottom: 20px;
   line-height: 1.75rem;
 }
 
-main .img-cont {
+.about-us .img-cont {
   width: min(400px, 80%);
   background-color: var(--persian-red);
 }
 
-main .img-cont img {
+.about-us .img-cont img {
   width: 100%;
   position: relative;
   bottom: -30px;

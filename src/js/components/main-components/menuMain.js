@@ -46,6 +46,7 @@ export default function createMenuMain(createEl, contentDiv) {
     menuItemCardCont.classList.add('menu-item-cont');
     imgCont.classList.add('img-cont');
     itemTxtCont.classList.add('text-cont');
+    main.classList.add('menu');
 
     itemImg.setAttribute('src', imgArr[i]);
 

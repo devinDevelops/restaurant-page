@@ -1,9 +1,9 @@
-main {
+.menu {
   margin: 0 65px;
   height: 100%;
 }
 
-main .h1-cont h1 {
+.menu .h1-cont h1 {
   font-size: 2.75rem;
   margin-bottom: 10px;
   color: var(--persian-red);

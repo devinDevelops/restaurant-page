@@ -25,6 +25,7 @@ export default function createAboutUsMain(createEl, contentDiv) {
   h1Cont.classList.add('h1-cont');
   pCont.classList.add('text-cont');
   imgCont.classList.add('img-cont');
+  main.classList.add('about-us');
 
   h1Cont.appendChild(h1);
   pCont.appendChild(p1);
