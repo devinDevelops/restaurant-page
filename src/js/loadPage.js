@@ -3,7 +3,8 @@ import '../css/style.css';
 import createHeader from './components/header';
 import createFooter from './components/footer';
 // import createHomeMain from './components/main-components/homeMain';
-import createMenuMain from './components/main-components/menuMain';
+// import createMenuMain from './components/main-components/menuMain';
+import createAboutUs from './components/main-components/aboutUsMain';
 
 export default function loadPage() {
   const contentDiv = document.getElementById('content');
@@ -12,7 +13,8 @@ export default function loadPage() {
   }
 
   createHeader(createEl, contentDiv);
-  createMenuMain(createEl, contentDiv);
+  createAboutUs(createEl, contentDiv);
+  // createMenuMain(createEl, contentDiv);
   // createHomeMain(createEl, contentDiv, Hero); // have this part be the argument that is passed in when calling loadPage
   createFooter(createEl, contentDiv);
 }
