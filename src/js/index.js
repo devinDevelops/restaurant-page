@@ -1,7 +1,18 @@
-import loadPage from './loadPage';
+import loadPage, { appendTargetMain, removeCurrMain } from './loadPage';
 
-loadPage('HOME');
+loadPage();
 
+function addLiListeners() {
+  const liEls = document.querySelectorAll('li');
+  liEls.forEach(li =>
+    li.addEventListener('click', e => {
+      removeCurrMain();
+      appendTargetMain(e.target.textContent);
+    })
+  );
+}
+
+addLiListeners();
 // style the other main component pages
 
 // write the logic that listens for a tab click and then

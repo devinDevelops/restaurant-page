@@ -31,4 +31,6 @@ export default function createMain(createEl, contentDiv) {
   main.appendChild(textCont);
   main.appendChild(imgCont);
   contentDiv.appendChild(main);
+
+  return main;
 }

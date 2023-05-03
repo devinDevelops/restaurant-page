@@ -36,4 +36,6 @@ export default function createAboutUsMain(createEl, contentDiv) {
   main.appendChild(pCont);
   main.appendChild(imgCont);
   contentDiv.appendChild(main);
+
+  return main;
 }

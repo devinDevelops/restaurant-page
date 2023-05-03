@@ -68,4 +68,6 @@ export default function createMenuMain(createEl, contentDiv) {
   main.appendChild(h1Cont);
   main.appendChild(gridCont);
   contentDiv.appendChild(main);
+
+  return main;
 }
