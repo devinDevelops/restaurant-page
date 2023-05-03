@@ -1,6 +1,6 @@
 import loadPage from './loadPage';
 
-loadPage();
+loadPage('HOME');
 
 // style the other main component pages
 
