@@ -1,12 +1,24 @@
 import '../../css/header.css';
 
-export default function createHeader(createEl, contentDiv) {
-  const header = createEl('header');
+const contentDiv = document.getElementById('content');
+
+function createEl(type) {
+  return document.createElement(type);
+}
+
+function createHeaderH1() {
   const h1 = createEl('h1');
+  h1.textContent = `COFFEE O' CLOCK`;
+
   const h1Cont = createEl('div');
+  h1Cont.classList.add('h1-cont');
+  h1Cont.appendChild(h1);
+
+  return h1Cont;
+}
+
+function createHeaderNav() {
   const ul = createEl('ul');
-  const contactBtn = createEl('button');
-  const btnCont = createEl('div');
 
   for (let i = 0; i < 3; i += 1) {
     const arr = ['HOME', 'MENU', 'ABOUT US'];
@@ -15,17 +27,32 @@ export default function createHeader(createEl, contentDiv) {
     ul.appendChild(li);
   }
 
-  h1Cont.classList.add('h1-cont');
-  contactBtn.classList.add('btn');
-  btnCont.classList.add('btn-cont');
-
-  h1.textContent = `COFFEE O' CLOCK`;
-  contactBtn.textContent = 'CONTACT US';
-
-  h1Cont.appendChild(h1);
-  btnCont.appendChild(contactBtn);
-  header.appendChild(h1Cont);
-  header.appendChild(ul);
-  header.appendChild(btnCont);
-  contentDiv.appendChild(header);
+  return ul;
 }
+
+function createHeaderContactBtn() {
+  const contactBtn = createEl('button');
+  contactBtn.textContent = 'CONTACT US';
+  contactBtn.classList.add('btn');
+
+  const btnCont = createEl('div');
+  btnCont.classList.add('btn-cont');
+  btnCont.appendChild(contactBtn);
+
+  return btnCont;
+}
+
+function createHeader() {
+  const header = createEl('header');
+  header.appendChild(createHeaderH1());
+  header.appendChild(createHeaderNav());
+  header.appendChild(createHeaderContactBtn());
+
+  return header;
+}
+
+function appendHeader() {
+  contentDiv.appendChild(createHeader());
+}
+
+export default appendHeader;

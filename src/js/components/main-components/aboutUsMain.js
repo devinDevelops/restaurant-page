@@ -1,41 +1,61 @@
+import createEl from '../../createEl';
 import '../../../css/aboutUsMain.css';
 import aboutUsIMG from '../../../img/aboutUsIMG.jpg';
 
-export default function createAboutUsMain(createEl, contentDiv) {
-  const main = createEl('main');
-  const h1Cont = createEl('div');
-  const h1 = createEl('h1');
-  const pCont = createEl('div');
-  const p1 = createEl('p');
-  const p2 = createEl('p');
-  const p3 = createEl('p');
-  const img = createEl('img');
-  const imgCont = createEl('div');
+function createAboutUsHeader() {
+  const aboutUsH1 = createEl('h1');
+  aboutUsH1.classList.add('h1-cont');
+  aboutUsH1.textContent = 'ABOUT US';
 
-  h1.textContent = 'ABOUT US';
+  const aboutUsH1Cont = createEl('div');
+  aboutUsH1Cont.appendChild(aboutUsH1);
+
+  return aboutUsH1Cont;
+}
+
+function createAboutUsPs() {
+  const p1 = createEl('p');
   p1.textContent =
     'THIS IS SOME MORE FILLER TEXT. STOP IN AND ENJOY A HOT CUP O JOE.';
+
+  const p2 = createEl('p');
   p2.textContent =
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse sed nisi lacus sed viverra tellus in hac habitasse. Id interdum velit laoreet id donec ultrices. Eget mi proin sed libero. Cursus vitae congue mauris rhoncus aenean vel elit scelerisque. Sed viverra tellus in hac habitasse.';
+
+  const p3 = createEl('p');
   p3.textContent =
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae justo eget magna fermentum iaculis eu non diam phasellus. Aliquam sem fringilla ut morbi. Vitae aliquet nec ullamcorper sit.';
 
-  img.setAttribute('src', aboutUsIMG);
-
-  h1Cont.classList.add('h1-cont');
+  const pCont = createEl('div');
   pCont.classList.add('text-cont');
-  imgCont.classList.add('img-cont');
-  main.classList.add('about-us');
-
-  h1Cont.appendChild(h1);
   pCont.appendChild(p1);
   pCont.appendChild(p2);
   pCont.appendChild(p3);
+
+  return pCont;
+}
+
+function createAboutUsImg() {
+  const img = createEl('img');
+  img.setAttribute('src', aboutUsIMG);
+
+  const imgCont = createEl('div');
+  imgCont.classList.add('img-cont');
   imgCont.appendChild(img);
-  main.appendChild(h1Cont);
-  main.appendChild(pCont);
-  main.appendChild(imgCont);
-  contentDiv.appendChild(main);
+
+  return imgCont;
+}
+
+function createAboutUsMain() {
+  const main = createEl('main');
+
+  main.classList.add('about-us');
+
+  main.appendChild(createAboutUsHeader());
+  main.appendChild(createAboutUsPs());
+  main.appendChild(createAboutUsImg());
 
   return main;
 }
+
+export default createAboutUsMain;

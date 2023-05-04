@@ -1,17 +1,34 @@
 import '../../css/footer.css';
 
-export default function createFooter(createEl, contentDiv) {
-  const footer = createEl('footer');
+const contentDiv = document.getElementById('content');
+
+function createEl(type) {
+  return document.createElement(type);
+}
+
+function createFooterText() {
   const p = createEl('p');
-  const a = createEl('a');
-
   p.textContent = 'Developed by ';
-  a.textContent = 'devinDevelops';
 
+  const a = createEl('a');
+  a.textContent = 'devinDevelops';
   a.setAttribute('href', 'https://github.com/devinDevelops');
   a.setAttribute('target', '_blank');
 
   p.appendChild(a);
-  footer.appendChild(p);
-  contentDiv.appendChild(footer);
+
+  return p;
 }
+
+function createFooter() {
+  const footer = createEl('footer');
+  footer.appendChild(createFooterText());
+
+  return footer;
+}
+
+function appendFooter() {
+  contentDiv.appendChild(createFooter());
+}
+
+export default appendFooter;
